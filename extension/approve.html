@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Inazuma — Connect</title>
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0; padding: 22px; width: 340px;
+        background: #07070b; color: #f5f5f7;
+        font-family: ui-sans-serif, system-ui, sans-serif;
+      }
+      img { width: 40px; height: 40px; }
+      h1 { font-size: 15px; letter-spacing: .18em; text-transform: uppercase; margin: 14px 0 6px; }
+      p { font-size: 13px; color: #a1a1aa; line-height: 1.5; margin: 0 0 10px; }
+      .origin, .addr {
+        font-family: ui-monospace, monospace; font-size: 12px;
+        border: 1px solid #26262e; border-radius: 8px; padding: 9px 10px;
+        background: #0d0d13; word-break: break-all; margin-bottom: 10px;
+      }
+      .addr { color: #F02FC3; }
+      .row { display: flex; gap: 8px; margin-top: 14px; }
+      button {
+        flex: 1; padding: 10px; border-radius: 999px; font-size: 13px;
+        font-weight: 600; cursor: pointer; border: 1px solid #26262e;
+        background: transparent; color: #f5f5f7;
+      }
+      #approve { background: #F02FC3; border-color: #F02FC3; color: #07070b; }
+    </style>
+  </head>
+  <body>
+    <img src="icon48.png" alt="Inazuma" />
+    <h1>Connect request</h1>
+    <p>This site wants to see your Inazuma address.</p>
+    <div class="origin" id="origin"></div>
+    <div class="addr" id="addr"></div>
+    <p>Only your public address is shared. Your keys stay encrypted on this device.</p>
+    <div class="row">
+      <button id="reject" type="button">Reject</button>
+      <button id="approve" type="button">Connect</button>
+    </div>
+    <script src="approve.js"></script>
+  </body>
+</html>
