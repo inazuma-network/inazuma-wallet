@@ -18,7 +18,7 @@ jobs:
           fi
       - name: Package extension
         run: cd extension && zip -qr ../inazuma-wallet.zip . && ls -lh ../inazuma-wallet.zip
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: inazuma-wallet-extension
           path: inazuma-wallet.zip
