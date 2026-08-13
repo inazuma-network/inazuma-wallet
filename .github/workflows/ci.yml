@@ -7,7 +7,7 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate manifest.json
         run: |
           python3 -c "import json;m=json.load(open('extension/manifest.json'));assert m['manifest_version']==3;print('manifest v'+m['version'])"
