@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Inazuma — Connect</title>
+    <link rel="stylesheet" href="fonts.css" />
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0; padding: 22px; width: 340px;
+        background: #0a0a0a; color: #ededf0;
+        font-family: "Inter Tight", Inter, ui-sans-serif, system-ui, sans-serif;
+      }
+      img { width: 40px; height: 40px; }
+      h1 { font-family: "Instrument Serif", "Iowan Old Style", Georgia, serif; font-weight: 400; font-size: 26px; letter-spacing: -.015em; text-transform: none; margin: 14px 0 6px; }
+      .eyebrow { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .22em; color: #F02FC3; margin: 12px 0 0; }
+      p { font-size: 13px; color: #a1a1aa; line-height: 1.5; margin: 0 0 10px; }
+      .origin, .addr {
+        font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px;
+        border: 1px solid #232323; border-radius: 10px; padding: 9px 10px;
+        background: #0f0f0f; word-break: break-all; margin-bottom: 10px;
+      }
+      .addr { color: #F02FC3; }
+      .row { display: flex; gap: 8px; margin-top: 14px; }
+      button {
+        flex: 1; padding: 10px; border-radius: 999px; font-size: 13px;
+        font-weight: 600; cursor: pointer; border: 1px solid #232323;
+        background: transparent; color: #ededf0;
+      }
+      #approve { background: #F02FC3; border-color: #F02FC3; color: #0a0a0a; }
+    </style>
+  </head>
+  <body>
+    <img src="icon48.png" alt="Inazuma" />
+    <p class="eyebrow">Inazuma Wallet</p>
+    <h1>Connect request</h1>
+    <p>This site wants to see your Inazuma address.</p>
+    <div class="origin" id="origin"></div>
+    <div class="addr" id="addr"></div>
+    <p>Only your public address is shared. Your keys stay encrypted on this device.</p>
+    <div class="row">
+      <button id="reject" type="button">Reject</button>
+      <button id="approve" type="button">Connect</button>
+    </div>
+    <script src="approve.js"></script>
+  </body>
+</html>
